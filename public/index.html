@@ -113,3 +113,13 @@ document.getElementById('notifyBtn').addEventListener('click',()=>showToast('Not
 document.getElementById('copyRef').addEventListener('click',()=>{const input=document.getElementById('refLink');if(input.value==='Sign in to access your referral link'){showToast('Your referral link will appear after account setup.');return;}input.select();try{document.execCommand('copy');showToast('Referral link copied.')}catch(e){showToast('Select and copy the referral link.')}});
 </script>
 <script src="./qashflow.js"></script></body></html>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  window.qashflowSupabase = window.supabase.createClient(
+    'https://xnhqfkhddjuxozxwcmya.supabase.co',
+    'sb_publishable_54vlxBJfnkBRqXtzGIFs_A_H2TEKijJ'
+  );
+</script>
+<script src="./qashflow.js"></script>
+</body>
+</html>
